@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeiros Passos com DOM</title>
+    <style>
+        body {
+            background: rgb(0, 0, 0);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Aprendizado de <strong>DOM (Document Object Model)</strong></p>
+    
+       Tudo que aparece na árvove DOM, são conhecidos como elementos.<br/>
+       Esses elementos, podem ser selecionados para que haja navegabilidade por dentro da árvore DOM.
+
+    <p>Estudo de DOM... Tá, foda-se</p>
+       
+    <div id="idmensagem">div id</div>
+
+    <div name="namemensagem">div name</div>
+
+    <div class="classmensagem">div class</div>
+    
+    <script>
+        // NAVEGAÇÃO PELO DOM: SELEÇÃO DE ELEMENTOS
+
+            // MARCA (TAGNAME)
+
+            /* 
+               OBS: window lembra o self em python, mas aqui, em JS, não é obrigatório sua colocação.
+               OBS: JS funciona com índice (de array) a partir do zero, diferentemente de Julia, a qual tem seu começo regido pelo um. 
+            */
+            let paragrafoZero = window.document.getElementsByTagName('p')[0]
+            let pulaLinhaEmHTML = '<br/>'
+
+            /*
+                OBS:        document é necessário, pois write é um atributo.
+                innerText:  mostra o que há no texto (na variável).  
+                innerHTML:  mostra o texto com as Tag's filhas.
+            */
+            document.write(`${pulaLinhaEmHTML} Está escrito assim: ${paragrafoZero.innerText} ${pulaLinhaEmHTML}`)
+
+            document.write(`Agora, com a formatação na página: ${paragrafoZero.innerHTML}`)
+
+            // Muda a cor do primeiro parágrafo.
+            paragrafoZero.style.color = 'blue'
+
+
+            // ID (id)
+
+            let idNaDiv = document.getElementById('idmensagem')
+
+            idNaDiv.innerText = `Mudança de mensagem: "${idNaDiv.innerHTML}"`
+
+            // Muda a cor de fundo da div, da qual pertence este id.
+            idNaDiv.style.background = 'green'
+
+
+            // NOME (name)
+
+            // [0]: indica que a div está composta por mais de um elemento.
+            let nomeNaDiv = document.getElementsByName('namemensagem')[0]
+
+            nomeNaDiv.innerText = `De: ${nomeNaDiv.innerHTML} -> Para: Olá,`
+
+
+            // CLASSE (class)
+
+            // [0]: indica que a div está composta por mais de um elemento.
+            let classNaDiv = document.getElementsByClassName('classmensagem')[0]
+
+            classNaDiv.innerText = `De: ${classNaDiv.innerHTML} -> Para: Mundo!`
+
+
+            // SELETOR
+
+            /*
+                OBS: div id = #
+                OBS: div class = .
+            */
+
+            let idSelect = document.querySelector('div#idmensagem')
+
+            // A cor do texto desta div fica em azul.
+            idSelect.style.color = 'blue'
+
+        
+            let classSelect = document.querySelector('div.classmensagem')
+
+            // A cor do texto desta div fica em laranja.
+            classSelect.style.color = 'orange'
+
+    </script>
+</body>
+</html>

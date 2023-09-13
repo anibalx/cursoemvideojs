@@ -1,0 +1,59 @@
+# ---------- MÉTODO SIMPLES ---------- #
+1º Com o GIMP aberto, selecionei a imagem (ctrl + o)
+	arquivo
+	  abrir
+2º Com a imagem já selecionada, escolhi a ferramenta de seleção elíptica (letra e)
+	ferramentas
+	  ferramentas de seleção
+	    seleção elíptica
+
+3º Com o mouse, precionei o seu botão esquerdo e depois arrastei todo o "rato" para o lado, assim tendo criado uma forma elíptica.
+
+4º Também com o mouse, ajeitei o tamanho, a forma da elípse - por suas extremidades - e a posição na qual teria a imagem de meu interesse.
+
+5º Copiei a imagem (ctrl + c)
+	editar
+	  copiar
+
+6° Com o mouse, cliquei do lado de fora da fota (qualquer local), apenas para desmarcar a área da elípse (segurança).
+
+7° Adicionei um canal alfa (fundo quadriculado, que permite a imagem ficar sem fundo).
+	camadas
+	  transparência
+	    adicionar canal alfa
+
+8º Deletar a imagem (del)
+	editar
+	  limpar
+
+9º Colar imagem sobre o quadriculado (ctrl + v)
+	editar
+	  colar
+
+# ---------- MÉTODO COMPLICADO ---------- #
+
+
+1° Mesmos Passos do método acima
+2° Mesmos Passos do método acima
+3° Mesmos Passos do método acima
+4° Mesmos Passos do método acima
+5° Mesmos Passos do método acima
+
+
+# 6º Inverti a imagem (ctrl + i)
+#	selecionar
+#	  inverter
+
+6º Removi a camada (imagem como um todo)
+	camada
+	  remover camada
+
+7º Colei a imagem anteriomente salva, sobre a camada removida (ctrl + v)
+	editar
+	  colar
+
+8º Exportei como jpg (shift + ctrl + e)
+	arquivo
+	  exportar como
+
+9º Alterei a qualidade para 70 e exportei

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeiro uso de Funções</title>
+
+    <!-- Tag style: área reservada ao CSS deste código! -->
+    <style> 
+        div#area {
+            
+            font: normal 15pt Arial;
+            background: green;
+            color: white;
+            width: 200px;           /*largura*/
+            height: 200px;          /*comprimento*/
+            line-height: 200px;     /*comprimento da linha*/
+            text-align: center;     /*alinahmento do texto*/
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Chamada das funções no html -->
+    <div 
+        id="area"
+        onclick="clicar()"
+        onmouseenter="entrar()"
+        onmouseout="sair()" >
+        
+        interaja...
+    </div>
+
+    <!-- Tag script: área reservada ao JS deste código! -->
+    <script>
+        
+        // Variável que seleciona a div pelo id "area".
+        let divArea = document.getElementById('area')
+
+
+        /*
+            innerText:          mostra o que há no texto (na variável), aqui irá mostrar as mensagens adicionadas.
+            style.background:   muda a cor de fundo da div, da qual pertence o id.
+
+            As funções abaixo serão ativadas quando houver interação com o mouse.  
+        */
+
+
+        function clicar() {
+            divArea.innerText = 'Clicou!'
+            divArea.style.background = 'red'
+        }
+
+        function entrar() {
+            divArea.innerText = 'Está dentro!'
+        }
+
+        function sair() {
+            divArea.innerText = 'Saiu!'
+            divArea.style.background = 'grenn'
+        }
+
+    </script>
+</body>
+</html>

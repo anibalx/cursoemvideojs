@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex009 - Brasileiro ou Estrangeiro</title>
+</head>
+<body>
+    <!--
+        Fonte: https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/input
+        
+        input (elemento html):     cria uma caixa de texto para digitação.
+        type  (atributo de imput): determina a semâtica do comportamento de imput.
+        name  (atributo de imput): nome do controle, enviado junto aos dados do formulário.
+        value (atributo de imput): valor inicial do controle.
+                                   opcional, exceto quando o valor do atributo type for radio ou checkbox.
+    -->
+    <h1>Paizêra</h1>
+    Em que país se tá? 
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="confirmar" onclick="verificarNacionalidade()">
+    <div id="resposta"></div>
+
+    <!-- Tag script: área reservada ao JS deste código! -->
+    <script>
+        function verificarNacionalidade() {
+            let pais          = document.querySelector('input#pais')
+            let resposta      = document.querySelector('div#resposta')
+
+            if (pais.value.toLowerCase() != 'brasil') {
+                resposta.innerHTML = `<p>${pais.value}? Então, você não tá no Brasil? Legal!</p>`
+            } else {
+                resposta.innerHTML = `<p>Chega mais, então. Bora lá pá Lapa!</p>`
+            }
+
+        }
+    </script>
+</body>
+</html>

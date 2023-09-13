@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meu Primeiro Programa em JS</title>
+    <style>
+        body {
+            background-color: aqua;
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: black
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Caralho...</p>
+
+    <script>
+
+        // CONVERSÃO STRING - INT
+
+            // Declaração veroborrágica: prompt retorna string, que é convertida
+            // por Number.parseInt em um inteiro.
+            let numeroInteiro1 = Number.parseInt(window.prompt('Digite o númeroInteiro1: '))
+            window.alert('Número digitado foi: ' + numeroInteiro1)
+
+            // Faz o mesmo processo que o acima, só que um pouco mais legível.
+            let numeroInteiro2 = parseInt(prompt('Digite um númeroInteiro2: '))
+            alert('Número digitado foi: ' + numeroInteiro2)
+
+
+        // CONVERSÃO STRING - FLOAT
+
+            // Declaração veroborrágica: prompt retorna string, que é convertida
+            // por Number.parseInt em um inteiro.
+            let numeroReal1 = Number.parseFloat(window.prompt('Digite o númeroReal1: '))
+            window.alert('Número digitado foi: ' + numeroReal1)
+
+            // Faz o mesmo processo que o acima, só que um pouco mais legível.
+            let numeroReal2 = parseFloat(prompt('Digite o númeroReal2: '))
+            alert('Número digitado foi: ' + numeroReal2)
+
+
+        // CONVERSÃO NUMBER REALIZADA POR JAVASCRIPT
+    
+            // Faz o mesmo processo que os demais, só que a responsabilidade pela conversão
+            // fica a cargo do próprio JavaScript.
+            let numero = Number(prompt('Digite um número: '))
+            alert('Número digitado foi: ' + numero)
+
+        
+        // CONVERSÃO STRING
+
+            alert('Agora é uma string: ' + numero.toString())
+
+            // Sintaxe mais nova em relação a de cima.
+            alert('Agora é uma string: ' + String(numero))
+
+
+        // INTERPOLAÇÃO DE STRINGS
+
+            // placeholder: ${}.
+            // Note, toda a string (oração) está entre crases.
+            alert(`O número é ${numero}`)
+
+    </script>
+</body>
+</html>

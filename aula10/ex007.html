@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Soma de Valores</title>
+
+
+    <!-- Tag style: área reservada ao CSS deste código! -->
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+
+        input {
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+
+        div#resultado {
+            margin-top: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <!--
+        Fonte: https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/input
+        
+        input (elemento html):     cria uma caixa de texto para digitação.
+        type  (atributo de imput): determina a semâtica do comportamento de imput.
+        name  (atributo de imput): nome do controle, enviado junto aos dados do formulário.
+        value (atributo de imput): valor inicial do controle.
+                                   opcional, exceto quando o valor do atributo type for radio ou checkbox.
+    -->
+
+    <h1>Soma de Valores</h1>
+    <input type="number" name="stringnum1" id="stringnum1">
+    <input type="number" name="stringnum2" id="stringnum2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="resultado">Resultado</div>
+    
+
+    <!-- Tag script: área reservada ao JS deste código! -->
+    <script>
+        /*
+            getElementById(): seleção de elemento pelo id. 
+            querySelector():  seleção de elemento id, ex: elemento#valor.
+        */
+
+        function somar() {
+            let stringNum1 = document.getElementById('stringnum1')
+            let stringNum2 = document.querySelector('input#stringnum2')
+            let resultado  = document.querySelector('div#resultado')
+
+            let primeiroNumero = Number(stringNum1.value)
+            let segundoNumero  = Number(stringNum2.value)
+
+            let soma = primeiroNumero + segundoNumero
+
+            resultado.innerHTML = `A soma entre ${primeiroNumero} e ${segundoNumero} é: ${soma}.`
+            
+        }
+
+        // Exibe uma tela pedindo permissão para angariar a localização do usuário.
+        let localização = navigator.geolocation.getCurrentPosition(function(){})
+
+    </script>
+</body>
+</html>

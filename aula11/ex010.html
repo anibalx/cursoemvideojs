@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex010 - SE</title>
+</head>
+<body>
+    <!--
+        Fonte: https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/input
+        
+        input (elemento html):     cria uma caixa de texto para digitação.
+        type  (atributo de imput): determina a semâtica do comportamento de imput.
+        name  (atributo de imput): nome do controle, enviado junto aos dados do formulário.
+        value (atributo de imput): valor inicial do controle.
+                                   opcional, exceto quando o valor do atributo type for radio ou checkbox.
+    -->
+    <h1>Sistema de Multas</h1>
+    
+    Sua velocidade é: 
+    <input type="number" name="velocidade" id="velocidade">
+    <input type="button" value="verificar" onclick="calcularMulta()">
+    <div id="resposta"></div>
+
+
+    <!-- Tag script: área reservada ao JS deste código! -->
+    <script>
+        /*
+            getElementById(): seleção de elemento pelo id. 
+            querySelector():  seleção de elemento id, ex: elemento#valor.
+        */
+       
+        function calcularMulta() {
+            let stringVelocidade = document.querySelector('input#velocidade')
+            let resposta         = document.getElementById('resposta')
+            
+            let velocidade       = Number(stringVelocidade.value)
+
+            if (velocidade > 60) {
+                resposta.innerHTML = `<p>${velocidade}Km/h? Caralho, cê vai receber uma multa, que porra é essa?!</p>`
+            }
+
+            resposta.innerHTML += `<p>É melhor não ter esquecido a porra do cinto de segurança, imbecil.</p>`
+        }
+    </script>
+</body>
+</html>

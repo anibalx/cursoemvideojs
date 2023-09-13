@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Uso de funções</title>
+
+    <!-- Tag style: área reservada ao CSS deste código! -->
+    <style> 
+        div#area {
+            
+            font: normal 15pt Arial;
+            background: green;
+            color: white;
+            width: 200px;           /*largura*/
+            height: 200px;          /*comprimento*/
+            line-height: 200px;     /*comprimento da linha*/
+            text-align: center;     /*alinahmento do texto*/
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        interaja...
+    </div>
+
+    <!-- Tag script: área reservada ao JS deste código! -->
+    <script>
+        
+        /*
+            divArea: variável que seleciona a div pelo id "area".
+            OBS: não é a melhor forma de fazer, pois pode haver um problema de uso de memória.
+
+            addEventListener(): registra uma única espera de evento em um único alvo.
+                                O alvo do evento pode ser um único elemento em um documento,
+                                o documento em si, uma janela, ou um XMLHttpRequest.
+        */
+ 
+        let divArea = document.getElementById('area')
+
+        divArea.addEventListener('click', clicar)
+        divArea.addEventListener('mouseenter', entrar)
+        divArea.addEventListener('mouseout', sair)
+        
+
+
+        /*
+            innerText:          mostra o que há no texto (na variável), aqui irá mostrar as mensagens adicionadas.
+            style.background:   muda a cor de fundo da div, da qual pertence o id.
+
+            As funções abaixo serão ativadas quando houver interação com o mouse.  
+        */
+
+        function clicar() {
+            divArea.innerText = 'Clicou!'
+            divArea.style.background = 'red'
+        }
+
+        function entrar() {
+            divArea.innerText = 'Está dentro!'
+        }
+
+        function sair() {
+            divArea.innerText = 'Saiu!'
+            divArea.style.background = 'grenn'
+        }
+
+    </script>
+</body>
+</html>

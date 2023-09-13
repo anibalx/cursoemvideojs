@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex016</title>
+
+    <!-- Tag link: área reservada ao CSS deste código! -->
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!--
+        Referência: https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/header
+        
+        tag <header></header>: CABEÇALHO
+
+        Representa um grupo de suporte introdutório ou navegacional. 
+        Pode conter alguns elementos de cabeçalho, mas também outros elementos:
+        como um logo, seções de cabeçalho, formulário de pesquisa e outros.
+    -->
+    <header>
+        <h1>Bora contar?</h1>
+    </header>
+
+    <!--
+        Referência: https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/section
+
+        tag <section></section>: SEÇÃO
+
+        Representa uma seção genérica contida em um documento HTML, geralmente com um título. 
+        Isso, quando não existir um elemento semântico mais específico para representá-lo.
+
+        EX: <nav> menu de navegação </nav>, porém:
+
+            <section> lista com resultados de pesquisa </section>
+                    
+                                ou
+            <section> exibição de uma mapa e seus controles </section>
+    -->
+    <section>
+        <div id="dados">
+            
+            <p> Início: <input type="number" name="inicio" id="inicio"> </p>
+            <p> Fim:    <input type="number" name="fim" id="fim"> </p>
+            <p> Passo:  <input type="number" name="passo" id="passo"> </p>
+      
+            <p> <input type="button" value="contar" onclick="contar()"> </p>
+
+        </div>
+            
+        <div id="resposta">
+            <p> Preparar. Apontar... </p>
+        </div>
+    </section>
+
+
+    <!--
+        Referência: https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/footer
+
+        tag <footer></footer>: RODAPÉ
+
+        Representa um rodapé para o seu sectioning content (conteúdo de seção) mais próximo ou sectioning root elemento. 
+        (Ou seja, seu parente mais próximo: <article>, <aside>, <nav>, <section>, <blockquote>, <body>, <details>, <fieldset>, <figure>, <td>). 
+        Normalmente, um rodapé contém informações sobre o autor da seção de dados, direitos autorais ou links para documentos relacionados.
+
+    -->
+    <footer> <p>&copy; CursoemVideo</p> </footer>
+
+
+    <!-- Tag script: área reservada ao JS deste código! -->
+    <script src="script.js"></script>
+</body>
+</html>

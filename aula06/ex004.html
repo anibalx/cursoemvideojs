@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        
+        body {
+            font: normal 20pt Arial;
+        }
+
+    </style>
+
+</head>
+<body>
+    <script>
+
+        // FORMATAÇÃO DE STRINGS.
+        
+            let nome = window.prompt('Qual seu nome? ')
+            
+            // Pula uma linha e exibe a mensagem na página. 
+            document.writeln(`Olá, ${nome}!`)
+
+            // Atributo lenght: exibe o número de caracteres que existem na string. 
+            document.writeln(`Curioso... seu nome tem ${nome.length} total de letras.`)
+
+            // Método toUpperCase(); joga tudo para maiúscula.
+            document.writeln(`${nome}, olha como fica tudo em maiúsculo: ${nome.toUpperCase()}`)
+
+            // Método toLowerCase(); joga tudo para minúscula.
+            document.writeln(`${nome}, olha como fica tudo em maiúsculo: ${nome.toLowerCase()}`)
+
+        
+        // FORAMATAÇÃO DE NÚMEROS
+
+            let salario = Number(prompt('Qual seu salário? '))
+
+            // Atributo (ou Função, ou Método) toFixed(): fixa um valor para a casa decimal.
+            // Atributo (ou Função, ou Método) replace(): substitui uma coisa por outra.
+            alert(`Seu salário é: ${salario.toFixed(2).replace(".", ",")}`)
+
+            // Atributo (ou Função, ou Método) toLocaleString(): localiza a string, com os atributos (style e currency).
+            alert(`${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+
+    </script>
+</body>
+</html>
